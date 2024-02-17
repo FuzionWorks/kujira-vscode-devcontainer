@@ -4,11 +4,11 @@ VS Code Dev Container containing all required components for development on Kuji
 
 # How To Use
 
- Add a `.devcontainer` folder to your repository with a `devcontainer.json` file as per the below example:
+ In Vs Code, add a `.devcontainer` folder to the root of your repository with a `devcontainer.json` file as per the below example and reopen VS Code in the container following these [instructions](https://code.visualstudio.com/docs/devcontainers/containers):
  ```
  {
 	"name": "Kujira",
-	"image": "ghcr.io/kujira-vscode-devcontainer:latest",
+	"image": "ghcr.io/fuzionworks/kujira-vscode-devcontainer:latest",
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
@@ -17,7 +17,6 @@ VS Code Dev Container containing all required components for development on Kuji
 	"hostRequirements": {
 		"cpus": 4
 	},
-	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
@@ -52,10 +51,10 @@ VS Code Dev Container containing all required components for development on Kuji
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "npm install",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "root",
+	// "remoteUser": "vscode",
 	"features": {
 		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2.9.0": {},
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/go:1": {},
 		"ghcr.io/devcontainers/features/node:1": {}
