@@ -5,7 +5,7 @@ VS Code Dev Container containing all required components for development on Kuji
 # How To Use
 
  Add a `.devcontainer` folder to your repository with a `devcontainer.json` file as per the below example:
- ```json
+ ```
  {
 	"name": "Kujira",
 	"image": "ghcr.io/kujira-vscode-devcontainer:latest",
